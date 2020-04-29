@@ -6,7 +6,7 @@ disabled_rules:
 - empty_enum_arguments # enumの引数を省略したいため
 
 # opt-inルールの中で無効にするルール
-# - conditional_returns_on_newline # ガード文などは簡潔に一行で記述したいため
+- conditional_returns_on_newline # ガード文などは簡潔に一行で記述したいため
 - discouraged_optional_collection # Appdelegateのデフォルトで出るため
 # - explicit_enum_raw_value # 暗黙的なraw値で問題ないため
 - explicit_acl # frameworkではないのでpublic等明記する必要無し
@@ -16,7 +16,7 @@ disabled_rules:
 - file_header # ヘッダには特に決まりがないため
 # - lower_acl_than_parent # 対応不可のため
 # - no_extension_access_modifier # extension_access_modifierを優先するため
-# - no_grouping_extension # グルーピングにextensionを利用したいため
+- no_grouping_extension # グルーピングにextensionを利用したいため
 # - strict_fileprivate # fileprivateを利用したいため
 # - switch_case_on_newline # caseと同じ行に記述したいため
 # - trailing_closure # RxSwiftのOnNextでwarningが出るため
@@ -115,7 +115,7 @@ opt_in_rules:
 
 # Lint対象に追加するパス
 included:
-- Agents Partner
+- TaskManagementMVCDemo
 
 # Lint対象から除外するパス
 excluded:
