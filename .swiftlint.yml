@@ -8,16 +8,18 @@ disabled_rules:
 # opt-inルールの中で無効にするルール
 - conditional_returns_on_newline # ガード文などは簡潔に一行で記述したいため
 - discouraged_optional_collection # Appdelegateのデフォルトで出るため
-# - explicit_enum_raw_value # 暗黙的なraw値で問題ないため
+- explicit_enum_raw_value # 暗黙的なraw値で問題ないし楽な為
 - explicit_acl # frameworkではないのでpublic等明記する必要無し
 - explicit_top_level_acl # frameworkではないのでpublic等明記する必要無し
 - explicit_type_interface # 型推論を利用したいため
 # - fatal_error_message # メッセージは不要なため
 - file_header # ヘッダには特に決まりがないため
+- file_name # typealiasでクラス名などを別名で参照することとの関連で、ファイル名とクラス名などが一致しない場合もある為。
+- implicitly_unwrapped_optional
 # - lower_acl_than_parent # 対応不可のため
 # - no_extension_access_modifier # extension_access_modifierを優先するため
 - no_grouping_extension # グルーピングにextensionを利用したいため
-# - strict_fileprivate # fileprivateを利用したいため
+- strict_fileprivate # Extension での　グループ分けを利用することから、fileprivateも利用したいため
 # - switch_case_on_newline # caseと同じ行に記述したいため
 # - trailing_closure # RxSwiftのOnNextでwarningが出るため
 - vertical_whitespace_opening_braces #見づらい
@@ -115,7 +117,7 @@ opt_in_rules:
 
 # Lint対象に追加するパス
 included:
-- TaskManagementMVCDemo
+- GitHubClientMVVMDemo
 
 # Lint対象から除外するパス
 excluded:
